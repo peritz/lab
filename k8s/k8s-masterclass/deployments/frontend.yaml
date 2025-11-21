@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend
+  name: frontend
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: frontend
+  # Template is the pod template used to create the pods
+  # within the deployment
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - image: nginx:1.29
+          name: nginx
+  # This is the RollingUpdate strategy (default)
+  # for replacing pods
+  strategy:
+    type: RollingUpdate
+    # We have 10 replicas, only 11 can exist during rolling update
+    # and a minimum of 9 can be up.
+    rollingUpdate:
+      # Only allow 1 container to be down at a time
+      maxUnavailable: 1
+      # When rolling only allow one extra pod
+      # to be created over the desired replicas
+      maxSurge: 1
+    
