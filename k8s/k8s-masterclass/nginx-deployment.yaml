@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: nginx
+  # Template is the pod template used to create the pods
+  # within the deployment
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - image: nginx:1.29
+          name: nginx
+          # The below commands demonstrate what happens when your container
+          # fails mid-update
+          # command: ["/bin/bash", "-c"] # override the default command
+          # args: ["sleep 5; exit 1"]
+  # This is the RollingUpdate strategy (default)
+  # for replacing pods
+  strategy:
+    type: RollingUpdate
+    # We have 10 replicas, only 11 can exist during rolling update
+    # and a minimum of 9 can be up.
+    rollingUpdate:
+      # Only allow 1 container to be down at a time
+      maxUnavailable: 1
+      # When rolling only allow one extra pod
+      # to be created over the desired replicas
+      maxSurge: 1
+    

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: nginx
+  # Template is the pod template used to create the pods
+  # within the deployment
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - image: nginx:1.28
+          name: nginx
+  # This is the Recreate strategy for replacing pods
+  strategy:
+    type: Recreate
+
