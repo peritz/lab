@@ -22,3 +22,11 @@ spec:
         # Expose a single port to the pod
         ports:
           - containerPort: 9000
+        # Mount the persistent volume claim in storage.yaml
+        volumeMounts:
+        - mountPath: /app/data
+          name: mealie-data
+      volumes:
+        - name: mealie-data
+          persistentVolumeClaim:
+            claimName: mealie-data
