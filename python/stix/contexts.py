@@ -12,6 +12,8 @@ from stix2 import (
 )
 
 class BaseStixEnvironment(Environment):
+    # Consider also passing in parent environments that can be treated in a standard way and
+    # combined when moving up the context stack
     def __init__(self, creator_name: str, additional_source=None):
         self._isolated_store = MemoryStore()
         super().__init__(store=self._isolated_store, source=additional_source)
@@ -36,6 +38,8 @@ class BaseStixEnvironment(Environment):
 class BaseStixContextManager(AbstractContextManager):
     _CONTEXT_CLASS = BaseStixEnvironment
 
+    # Consider dealing with environments rather than a bundle
+    # The bundle can be resolved at the end
     def __init__(self, creator_name: str, bundle: Bundle):
         self._context = self._CONTEXT_CLASS(creator_name)
         self._bundle = bundle
@@ -44,6 +48,10 @@ class BaseStixContextManager(AbstractContextManager):
         return self._context
 
     def __exit__(self, *exc_details):
+        # Possibly a function called "Merge Environments" that adds the other environment's source
+        # as a source in the parent environment or something to that effect? Maybe "wrap"?
+        # Don't necessarily need to do this at the end, do it at the beginning in the __init__ of
+        # BaseStixEnvironment
         self._context.extend_bundle(self._bundle)
 
 
@@ -61,6 +69,7 @@ class MalwareContextManager(BaseStixContextManager):
 
 
 if __name__ == "__main__":
+    # Test nested environments with a validation function to add C2 servers
     bundle = Bundle([IPv4Address(value="1.1.1.1")])
     with MalwareContextManager("Me, Myself, and I", bundle, "Spicy Potato") as ctx:
         # Cloudflare ftw
