@@ -1,0 +1,440 @@
+version = 1
+revision = 3
+requires-python = ">=3.9"
+
+[[package]]
+name = "alembic"
+version = "0.9.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "mako" },
+    { name = "python-dateutil" },
+    { name = "python-editor" },
+    { name = "sqlalchemy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/89/03/756d5b8e1c90bf283c3f435766aa3f20208d1c3887579dd8f2122e01d5f4/alembic-0.9.9.tar.gz", hash = "sha256:85bd3ea7633024e4930900bc64fb58f9742dedbc6ebb6ecf25be2ea9a3c1b32e", size = 1012778, upload-time = "2018-03-22T14:42:36.428Z" }
+
+[[package]]
+name = "blinker"
+version = "1.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1b/51/e2a9f3b757eb802f61dc1f2b09c8c99f6eb01cf06416c0671253536517b6/blinker-1.4.tar.gz", hash = "sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6", size = 111476, upload-time = "2015-07-23T12:26:37.745Z" }
+
+[[package]]
+name = "certifi"
+version = "2026.4.22"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/25/ee/6caf7a40c36a1220410afe15a1cc64993a1f864871f698c0f93acb72842a/certifi-2026.4.22.tar.gz", hash = "sha256:8d455352a37b71bf76a79caa83a3d6c25afee4a385d632127b6afb3963f1c580", size = 137077, upload-time = "2026-04-22T11:26:11.191Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/22/30/7cd8fdcdfbc5b869528b079bfb76dcdf6056b1a2097a662e5e8c04f42965/certifi-2026.4.22-py3-none-any.whl", hash = "sha256:3cb2210c8f88ba2318d29b0388d1023c8492ff72ecdde4ebdaddbb13a31b1c4a", size = 135707, upload-time = "2026-04-22T11:26:09.372Z" },
+]
+
+[[package]]
+name = "chardet"
+version = "3.0.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", size = 1868453, upload-time = "2017-06-08T14:34:35.581Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691", size = 133356, upload-time = "2017-06-08T14:34:33.552Z" },
+]
+
+[[package]]
+name = "click"
+version = "6.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/95/d9/c3336b6b5711c3ab9d1d3a80f1a3e2afeb9d8c02a7166462f6cc96570897/click-6.7.tar.gz", hash = "sha256:f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b", size = 279019, upload-time = "2017-01-06T22:41:13.209Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl", hash = "sha256:29f99fc6125fbc931b758dc053b3114e55c77a6e4c6c3a2674a2dc986016381d", size = 71175, upload-time = "2017-01-06T22:41:15.466Z" },
+]
+
+[[package]]
+name = "flask"
+version = "1.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "itsdangerous" },
+    { name = "jinja2" },
+    { name = "werkzeug" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4b/12/c1fbf4971fda0e4de05565694c9f0c92646223cff53f15b6eb248a310a62/Flask-1.0.2.tar.gz", hash = "sha256:2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48", size = 644534, upload-time = "2018-05-02T14:26:28.31Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl", hash = "sha256:a080b744b7e345ccfcbc77954861cb05b3c63786e93f2b3875e0913d44b43f05", size = 91364, upload-time = "2018-05-02T14:26:26.228Z" },
+]
+
+[[package]]
+name = "flask-bootcamp"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "alembic" },
+    { name = "blinker" },
+    { name = "chardet" },
+    { name = "click" },
+    { name = "flask" },
+    { name = "flask-dance" },
+    { name = "flask-debugtoolbar" },
+    { name = "flask-login" },
+    { name = "flask-migrate" },
+    { name = "flask-oauth" },
+    { name = "flask-oauthlib" },
+    { name = "flask-sqlalchemy" },
+    { name = "flask-wtf" },
+    { name = "httplib2" },
+    { name = "idna" },
+    { name = "itsdangerous" },
+    { name = "jinja2" },
+    { name = "lazy" },
+    { name = "mako" },
+    { name = "markupsafe" },
+    { name = "oauth2" },
+    { name = "oauthlib" },
+    { name = "python-dateutil" },
+    { name = "python-editor" },
+    { name = "requests" },
+    { name = "requests-oauthlib" },
+    { name = "six" },
+    { name = "sqlalchemy" },
+    { name = "sqlalchemy-utils" },
+    { name = "urllib3" },
+    { name = "urlobject" },
+    { name = "werkzeug" },
+    { name = "wincertstore" },
+    { name = "wtforms" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "alembic", specifier = "==0.9.9" },
+    { name = "blinker", specifier = "==1.4" },
+    { name = "chardet", specifier = "==3.0.4" },
+    { name = "click", specifier = "==6.7" },
+    { name = "flask", specifier = "==1.0.2" },
+    { name = "flask-dance", specifier = "==0.14.0" },
+    { name = "flask-debugtoolbar", specifier = "==0.10.1" },
+    { name = "flask-login", specifier = "==0.4.1" },
+    { name = "flask-migrate", specifier = "==2.1.1" },
+    { name = "flask-oauth", specifier = "==0.12" },
+    { name = "flask-oauthlib", specifier = "==0.9.4" },
+    { name = "flask-sqlalchemy", specifier = "==2.3.2" },
+    { name = "flask-wtf", specifier = "==0.14.2" },
+    { name = "httplib2", specifier = "==0.11.3" },
+    { name = "idna", specifier = "==2.6" },
+    { name = "itsdangerous", specifier = "==0.24" },
+    { name = "jinja2", specifier = "==2.10" },
+    { name = "lazy", specifier = "==1.3" },
+    { name = "mako", specifier = "==1.0.7" },
+    { name = "markupsafe", specifier = "==1.1.1" },
+    { name = "oauth2", specifier = "==1.9.0.post1" },
+    { name = "oauthlib", specifier = "==2.0.7" },
+    { name = "python-dateutil", specifier = "==2.7.2" },
+    { name = "python-editor", specifier = "==1.0.3" },
+    { name = "requests", specifier = "==2.18.4" },
+    { name = "requests-oauthlib", specifier = "==0.8.0" },
+    { name = "six", specifier = "==1.11.0" },
+    { name = "sqlalchemy", specifier = "==1.2.6" },
+    { name = "sqlalchemy-utils", specifier = "==0.33.2" },
+    { name = "urllib3", specifier = "==1.22" },
+    { name = "urlobject", specifier = "==2.4.3" },
+    { name = "werkzeug", specifier = "==0.14.1" },
+    { name = "wincertstore", specifier = "==0.2" },
+    { name = "wtforms", specifier = "==2.1" },
+]
+
+[[package]]
+name = "flask-dance"
+version = "0.14.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "lazy" },
+    { name = "oauthlib" },
+    { name = "requests" },
+    { name = "requests-oauthlib" },
+    { name = "six" },
+    { name = "urlobject" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cf/43/b13d3c16c9e753435974b2588cca8e684beb0bdceb4c19065968866e818d/Flask-Dance-0.14.0.tar.gz", hash = "sha256:0c608d9f003a38493fdff092a2eb482c2c6b768ef878112e0d03676a6a92fa67", size = 974822, upload-time = "2018-03-14T07:46:27.347Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b0/95/1f1adfe96e48ca2171928f859b0deddbadb7e2324eea18b854ecba3d3278/Flask_Dance-0.14.0-py2.py3-none-any.whl", hash = "sha256:56b50af359842e767a9b20d1ea2afea2a7268558e76c1fbadc652aa840abec7d", size = 39403, upload-time = "2018-03-14T07:46:23.488Z" },
+]
+
+[[package]]
+name = "flask-debugtoolbar"
+version = "0.10.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "blinker" },
+    { name = "flask" },
+    { name = "itsdangerous" },
+    { name = "werkzeug" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ce/5e/bfbfcebfcc25ffe4a5c8ee03b073b3e87e2890d69ddb45a32f1bf72615d0/Flask-DebugToolbar-0.10.1.tar.gz", hash = "sha256:ec810083123aae0632eb32ba11e1cb4cdace81e7ce6c5009dd06c5204afbce52", size = 252937, upload-time = "2017-02-12T11:26:13.119Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c9/3c/309073df635148f3536a5ed67940fb9b51ca67c1d6d2debafb81533201f3/Flask_DebugToolbar-0.10.1-py2.py3-none-any.whl", hash = "sha256:3d9657bc0c3633ace429e3ff451742bb59d1b7a7b95c9eb23a65ac9be2812959", size = 326835, upload-time = "2017-02-12T11:26:16.175Z" },
+]
+
+[[package]]
+name = "flask-login"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c1/ff/bd9a4d2d81bf0c07d9e53e8cd3d675c56553719bbefd372df69bf1b3c1e4/Flask-Login-0.4.1.tar.gz", hash = "sha256:c815c1ac7b3e35e2081685e389a665f2c74d7e077cb93cecabaea352da4752ec", size = 14118, upload-time = "2017-12-02T02:35:30.38Z" }
+
+[[package]]
+name = "flask-migrate"
+version = "2.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "alembic" },
+    { name = "flask" },
+    { name = "flask-sqlalchemy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2f/84/9a7d3dafd45b41931f2833a28f96537cca1771583102204310a6246f750e/Flask-Migrate-2.1.1.tar.gz", hash = "sha256:b709ca8642559c3c5a81a33ab10839fa052177accd5ba821047a99db635255ed", size = 15034, upload-time = "2017-08-28T22:07:42.801Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c6/06/053630cb5fe3974c7d60c2d3f3907bae6ff86beb8720bd4fcf53c45c6702/Flask_Migrate-2.1.1-py2.py3-none-any.whl", hash = "sha256:493f9b3795985b9b4915bf3b7d16946697f027b73545384e7d9e3a79f989d2fe", size = 13527, upload-time = "2017-11-17T19:41:21.903Z" },
+]
+
+[[package]]
+name = "flask-oauth"
+version = "0.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "oauth2" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/06/86/0ee429eb76e1ac357544129336e83d9f829e3e1f042ea217c0ac8504a0a7/Flask-OAuth-0.12.tar.gz", hash = "sha256:74eb646b3e0b3b63d4adc36024d163033fc6d01f32cf01f9e9b6c8b562313ec6", size = 6211, upload-time = "2012-10-06T09:52:19.785Z" }
+
+[[package]]
+name = "flask-oauthlib"
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "oauthlib" },
+    { name = "requests-oauthlib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0e/8a/775cd729baec72ce388c175e7aa0cba3a7a0b7740c5a5803d335235d38df/Flask-OAuthlib-0.9.4.tar.gz", hash = "sha256:bcd6f2f4f58c764824a1de31b9beae22585c5191992d298c0be0b3118dfcbdc6", size = 34252, upload-time = "2017-06-09T08:06:08.305Z" }
+
+[[package]]
+name = "flask-sqlalchemy"
+version = "2.3.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "sqlalchemy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3a/66/f5ace276517c075f102457dd2f7d8645b033758f9c6effb4e0970a90fec1/Flask-SQLAlchemy-2.3.2.tar.gz", hash = "sha256:5971b9852b5888655f11db634e87725a9031e170f37c0ce7851cf83497f56e53", size = 105530, upload-time = "2017-10-11T15:06:10.206Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a1/44/294fb7f6bf49cc7224417cd0637018db9fee0729b4fe166e43e2bbb1f1c8/Flask_SQLAlchemy-2.3.2-py2.py3-none-any.whl", hash = "sha256:3bc0fac969dd8c0ace01b32060f0c729565293302f0c4269beed154b46bec50b", size = 16679, upload-time = "2017-10-11T15:06:08.043Z" },
+]
+
+[[package]]
+name = "flask-wtf"
+version = "0.14.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "wtforms" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ba/15/00a9693180f214225a2c0b1bb9077f3b0b21f2e86522cbba22e8ad6e570c/Flask-WTF-0.14.2.tar.gz", hash = "sha256:5d14d55cfd35f613d99ee7cba0fc3fbbe63ba02f544d349158c14ca15561cc36", size = 254903, upload-time = "2017-01-10T10:06:42.178Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/60/3a/58c629472d10539ae5167dc7c1fecfa95dd7d0b7864623931e3776438a24/Flask_WTF-0.14.2-py2.py3-none-any.whl", hash = "sha256:d9a9e366b32dcbb98ef17228e76be15702cd2600675668bca23f63a7947fd5ac", size = 14903, upload-time = "2017-01-10T10:06:37.316Z" },
+]
+
+[[package]]
+name = "httplib2"
+version = "0.11.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/ce/aa4a385e3e9fd351737fd2b07edaa56e7a730448465aceda6b35086a0d9b/httplib2-0.11.3.tar.gz", hash = "sha256:e71daed9a0e6373642db61166fa70beecc9bf04383477f84671348c02a04cbdf", size = 215815, upload-time = "2018-03-30T02:29:15.323Z" }
+
+[[package]]
+name = "idna"
+version = "2.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f4/bd/0467d62790828c23c47fc1dfa1b1f052b24efdf5290f071c7a91d0d82fd3/idna-2.6.tar.gz", hash = "sha256:2c6a5de3089009e3da7c5dde64a141dbc8551d5b7f6cf4ed7c2568d0cc520a8f", size = 135992, upload-time = "2017-08-08T03:44:58.385Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/27/cc/6dd9a3869f15c2edfab863b992838277279ce92663d334df9ecf5106f5c6/idna-2.6-py2.py3-none-any.whl", hash = "sha256:8c7309c718f94b3a625cb648ace320157ad16ff131ae0af362c9f21b80ef6ec4", size = 56450, upload-time = "2017-08-08T03:45:11.061Z" },
+]
+
+[[package]]
+name = "itsdangerous"
+version = "0.24"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/b4/a60bcdba945c00f6d608d8975131ab3f25b22f2bcfe1dab221165194b2d4/itsdangerous-0.24.tar.gz", hash = "sha256:cbb3fcf8d3e33df861709ecaf89d9e6629cff0a217bc2848f1b41cd30d360519", size = 46541, upload-time = "2014-03-28T11:09:28.309Z" }
+
+[[package]]
+name = "jinja2"
+version = "2.10"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markupsafe" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/56/e6/332789f295cf22308386cf5bbd1f4e00ed11484299c5d7383378cf48ba47/Jinja2-2.10.tar.gz", hash = "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4", size = 261631, upload-time = "2017-11-08T20:13:44.666Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl", hash = "sha256:74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd", size = 126381, upload-time = "2017-11-08T20:13:42.279Z" },
+]
+
+[[package]]
+name = "lazy"
+version = "1.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/10/3b/655ffabb1627bff2539ddc3f3e0cdd6df51c65d4d51c20ba4c14e1ee8ad4/lazy-1.3.zip", hash = "sha256:c80a77bf7106ba7b27378759900cfefef38271088dc63b014bcfe610c8e68e3d", size = 15996, upload-time = "2017-02-05T13:33:16.862Z" }
+
+[[package]]
+name = "mako"
+version = "1.0.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markupsafe" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/eb/f3/67579bb486517c0d49547f9697e36582cd19dafb5df9e687ed8e22de57fa/Mako-1.0.7.tar.gz", hash = "sha256:4e02fde57bd4abb5ec400181e4c314f56ac3e49ba4fb8b0d50bba18cb27d25ae", size = 564418, upload-time = "2017-07-13T16:13:10.868Z" }
+
+[[package]]
+name = "markupsafe"
+version = "1.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b", size = 19151, upload-time = "2019-02-24T01:05:32.989Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/85/85/43579939ae1ec6a493c0e68528cd4e26a29fbd4109f5553d4966f6273801/MarkupSafe-1.1.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:d73a845f227b0bfe8a7455ee623525ee656a9e2e749e4742706d80a6065d5e2c", size = 16351, upload-time = "2021-01-29T23:50:59.684Z" },
+    { url = "https://files.pythonhosted.org/packages/f0/03/85efaa82ea0c7655b99db9252347623626048b35c03b046fcfde1af43b61/MarkupSafe-1.1.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:98bae9582248d6cf62321dcb52aaf5d9adf0bad3b40582925ef7c7f0ed85fceb", size = 32227, upload-time = "2021-01-29T23:51:00.88Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/bd/c5183b3416a14c221de4208a52665f7038cc8b159e8ad89bd9ccc23de08a/MarkupSafe-1.1.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:2beec1e0de6924ea551859edb9e7679da6e4870d32cb766240ce17e0a0ba2014", size = 32486, upload-time = "2021-01-29T23:51:02.169Z" },
+    { url = "https://files.pythonhosted.org/packages/8c/9b/85abd4ff6f9b6d03ce504e6d84589e13d5fd6bc4d63647a57acf1b4abc03/MarkupSafe-1.1.1-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:7fed13866cf14bba33e7176717346713881f56d9d2bcebab207f7a036f41b850", size = 32229, upload-time = "2021-01-29T23:51:03.599Z" },
+    { url = "https://files.pythonhosted.org/packages/be/2e/ad118ca191e44dc6f87182310e5be51da71d4b81ac659e5f8d5f18251806/MarkupSafe-1.1.1-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:6f1e273a344928347c1290119b493a1f0303c52f5a5eae5f16d74f48c15d4a85", size = 32487, upload-time = "2021-01-29T23:51:05.184Z" },
+    { url = "https://files.pythonhosted.org/packages/0d/98/0fd0f0baf8a59facb65cee37a26c775ee5a114f86e8b0cfe01dad1b8022a/MarkupSafe-1.1.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:feb7b34d6325451ef96bc0e36e1a6c0c1c64bc1fbec4b854f4529e51887b1621", size = 33790, upload-time = "2021-01-29T23:51:06.712Z" },
+    { url = "https://files.pythonhosted.org/packages/dc/d7/e3478fb2c3f2cc446ae4c6dedba1805f04b329bf30237cfe9f484f3d0a0e/MarkupSafe-1.1.1-cp39-cp39-win32.whl", hash = "sha256:22c178a091fc6630d0d045bdb5992d2dfe14e3259760e713c490da5323866c39", size = 16159, upload-time = "2021-01-29T23:51:07.916Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/39/de6ecf2652dc1b0fb374888a398f326d6c61f12e8004ed3dccb093e33e00/MarkupSafe-1.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:b7d644ddb4dbd407d31ffb699f1d140bc35478da613b441c582aeb7c43838dd8", size = 16768, upload-time = "2021-01-29T23:51:09.146Z" },
+]
+
+[[package]]
+name = "oauth2"
+version = "1.9.0.post1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httplib2" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/64/19/8b9066e94088e8d06d649e10319349bfca961e87768a525aba4a2627c986/oauth2-1.9.0.post1.tar.gz", hash = "sha256:c006a85e7c60107c7cc6da1b184b5c719f6dd7202098196dfa6e55df669b59bf", size = 21306, upload-time = "2015-09-12T12:44:37.392Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a0/6f/86db603912ecd04109af952c38bc08928886cf0e34c723481fa7db98b4b5/oauth2-1.9.0.post1-py2.py3-none-any.whl", hash = "sha256:15b5c42301f46dd63113f1214b0d81a8b16254f65a86d3c32a1b52297f3266e6", size = 25381, upload-time = "2015-09-12T12:47:02.67Z" },
+]
+
+[[package]]
+name = "oauthlib"
+version = "2.0.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/47/b9/66278631430fe688b2e6c84df16619f1d1e27c9c6ebca28371f7c6fbb346/oauthlib-2.0.7.tar.gz", hash = "sha256:909665297635fa11fe9914c146d875f2ed41c8c2d78e21a529dd71c0ba756508", size = 128412, upload-time = "2018-03-19T13:41:24.878Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e0/ac/c6a0c98788aa0d61915190d089e9ebe680905a94261effe3936eb8fe356f/oauthlib-2.0.7-py2.py3-none-any.whl", hash = "sha256:09d438bcac8f004ae348e721e9d8a7792a9e23cd574634e973173344046287f5", size = 124549, upload-time = "2018-03-19T13:41:23.084Z" },
+]
+
+[[package]]
+name = "python-dateutil"
+version = "2.7.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c5/39/4da7c2dbc4f023fba5fb2325febcadf0d0ce0efdc8bd12083a0f65d20653/python-dateutil-2.7.2.tar.gz", hash = "sha256:9d8074be4c993fbe4947878ce593052f71dac82932a677d49194d8ce9778002e", size = 298000, upload-time = "2018-03-26T15:04:59.039Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/57/19f3a65bcf6d5be570ee8c35a5398496e10a0ddcbc95393b2d17f86aaaf8/python_dateutil-2.7.2-py2.py3-none-any.whl", hash = "sha256:3220490fb9741e2342e1cf29a503394fdac874bc39568288717ee67047ff29df", size = 212286, upload-time = "2018-03-26T15:04:57.512Z" },
+]
+
+[[package]]
+name = "python-editor"
+version = "1.0.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/65/1e/adf6e000ea5dc909aa420352d6ba37f16434c8a3c2fa030445411a1ed545/python-editor-1.0.3.tar.gz", hash = "sha256:a3c066acee22a1c94f63938341d4fb374e3fdd69366ed6603d7b24bed1efc565", size = 6975, upload-time = "2016-11-27T19:02:19.129Z" }
+
+[[package]]
+name = "requests"
+version = "2.18.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "chardet" },
+    { name = "idna" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b0/e1/eab4fc3752e3d240468a8c0b284607899d2fbfb236a56b7377a329aa8d09/requests-2.18.4.tar.gz", hash = "sha256:9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e", size = 126224, upload-time = "2017-08-15T13:23:46.348Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/df/50aa1999ab9bde74656c2919d9c0c085fd2b3775fd3eca826012bef76d8c/requests-2.18.4-py2.py3-none-any.whl", hash = "sha256:6a1b267aa90cac58ac3a765d067950e7dbbf75b1da07e895d1f594193a40a38b", size = 88704, upload-time = "2017-08-15T13:23:43.489Z" },
+]
+
+[[package]]
+name = "requests-oauthlib"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "oauthlib" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/80/14/ad120c720f86c547ba8988010d5186102030591f71f7099f23921ca47fe5/requests-oauthlib-0.8.0.tar.gz", hash = "sha256:883ac416757eada6d3d07054ec7092ac21c7f35cb1d2cf82faf205637081f468", size = 84110, upload-time = "2017-02-14T15:17:18.911Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/77/34/d0957563f20b259a31c12f14e858d79f2e66eb539d3c1b9ab7077ef030ca/requests_oauthlib-0.8.0-py2.py3-none-any.whl", hash = "sha256:50a8ae2ce8273e384895972b56193c7409601a66d4975774c60c2aed869639ca", size = 23360, upload-time = "2017-02-14T15:17:16.754Z" },
+]
+
+[[package]]
+name = "six"
+version = "1.11.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz", hash = "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9", size = 29860, upload-time = "2017-09-17T18:46:54.492Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl", hash = "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb", size = 10702, upload-time = "2017-09-17T18:46:53.702Z" },
+]
+
+[[package]]
+name = "sqlalchemy"
+version = "1.2.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/da/ef/f10a6892f8ff3c1fec1c25699a7379d1f72f291c8fa40b71c31cab3f779e/SQLAlchemy-1.2.6.tar.gz", hash = "sha256:7cb00cc9b9f92ef8b4391c8a2051f81eeafefe32d63c6b395fd51401e9a39edb", size = 5565074, upload-time = "2018-03-30T20:29:34.142Z" }
+
+[[package]]
+name = "sqlalchemy-utils"
+version = "0.33.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+    { name = "sqlalchemy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a0/40/1bed05c7b3df57e4a6154b1ad34bb17c3dbeb6beb45f16b03b5a2e399768/SQLAlchemy-Utils-0.33.2.tar.gz", hash = "sha256:986930124da1386208c2bcdcdb149df88c095ab62d666fae865639ede1edc5f6", size = 124753, upload-time = "2018-04-02T15:03:34.056Z" }
+
+[[package]]
+name = "urllib3"
+version = "1.22"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ee/11/7c59620aceedcc1ef65e156cc5ce5a24ef87be4107c2b74458464e437a5d/urllib3-1.22.tar.gz", hash = "sha256:cc44da8e1145637334317feebd728bd869a35285b93cbb4cca2577da7e62db4f", size = 226083, upload-time = "2017-07-20T09:05:48.756Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/63/cb/6965947c13a94236f6d4b8223e21beb4d576dc72e8130bd7880f600839b8/urllib3-1.22-py2.py3-none-any.whl", hash = "sha256:06330f386d6e4b195fbfc736b297f58c5a892e4440e54d294d7004e3a9bbea1b", size = 132332, upload-time = "2017-07-20T09:05:46.173Z" },
+]
+
+[[package]]
+name = "urlobject"
+version = "2.4.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e2/b8/1d0a916f4b34c4618846e6da0e4eeaa8fcb4a2f39e006434fe38acb74b34/URLObject-2.4.3.tar.gz", hash = "sha256:47b2e20e6ab9c8366b2f4a3566b6ff4053025dad311c4bb71279bbcfa2430caa", size = 27878, upload-time = "2017-04-20T18:27:22.139Z" }
+
+[[package]]
+name = "werkzeug"
+version = "0.14.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/08/a3bb1c045ec602dc680906fc0261c267bed6b3bb4609430aff92c3888ec8/Werkzeug-0.14.1.tar.gz", hash = "sha256:c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c", size = 1185546, upload-time = "2017-12-31T21:16:54.874Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/c4/12e3e56473e52375aa29c4764e70d1b8f3efa6682bef8d0aae04fe335243/Werkzeug-0.14.1-py2.py3-none-any.whl", hash = "sha256:d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b", size = 322863, upload-time = "2017-12-31T21:16:45.23Z" },
+]
+
+[[package]]
+name = "wincertstore"
+version = "0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/e1/765f9abdd57610b1c6251e4853edddcac60f929cf6c9029200887dde0f9e/wincertstore-0.2.zip", hash = "sha256:780bd1557c9185c15d9f4221ea7f905cb20b93f7151ca8ccaed9714dce4b327a", size = 14996, upload-time = "2014-02-26T11:42:17.867Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/67/12f477fa1cc8cbcdc78027c9fb0933ad41daf2e95a29d1cc8f34fe80c692/wincertstore-0.2-py2.py3-none-any.whl", hash = "sha256:22d5eebb52df88a8d4014d5cf6d1b6c3a5d469e6c3b2e2854f3a003e48872356", size = 8800, upload-time = "2014-02-26T11:42:57.783Z" },
+]
+
+[[package]]
+name = "wtforms"
+version = "2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bf/91/2e553b86c55e9cf2f33265de50e052441fb753af46f5f20477fe9c61280e/WTForms-2.1.zip", hash = "sha256:ffdf10bd1fa565b8233380cb77a304cd36fd55c73023e91d4b803c96bc11d46f", size = 553644, upload-time = "2015-12-15T05:47:58.98Z" }
