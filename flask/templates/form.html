@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+  {% if name %}
+  Hello, {{ name }}! <br />
+  Your email is {{ email }}
+  {% else %}
+  Hello, stranger!
+  {% endif %}
+</p>
+<h1>Form</h1>
+<form method="post">
+  {{ form.hidden_tag() }} {{ form.name.label }} {{ form.name() }}<br />
+  {{ form.email.label }} {{ form.email() }}<br />
+  {{ form.submit() }}
+</form>
+{% endblock %}
