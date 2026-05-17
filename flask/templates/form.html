@@ -10,8 +10,8 @@
 </p>
 <h1>Form</h1>
 <form method="post">
-  {{ form.hidden_tag() }} {{ form.name.label }} {{ form.name() }}<br />
-  {{ form.email.label }} {{ form.email() }}<br />
+  {{ form.hidden_tag() }} {{ form.name.label }} {{ form.name(class="form-control") }}<br />
+  {{ form.email.label }} {{ form.email(class="form-control") }}<br />
   {{ form.submit() }}
 </form>
 {% endblock %}
