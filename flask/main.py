@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, url_for, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
@@ -17,6 +17,11 @@ def get_user(username):
 @app.route('/basic')
 def basic():
     return render_template('basic.html')
+
+@app.route('/basic/flash')
+def basic_flash():
+    flash("Here is some information about a message!")
+    return redirect(url_for("basic"))
 
 class UserForm(FlaskForm):
     name = StringField("Name")
